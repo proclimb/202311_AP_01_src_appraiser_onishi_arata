@@ -119,7 +119,7 @@ function subStockView($param)
 			return;
 		}
 
-		$sql = fnSqlStockList(1, $param);
+		$sql = fnSqlStockList(0, $param);
 		$res = mysqli_query($param["conn"], $sql);
 		$row = mysqli_fetch_array($res);
 
@@ -239,6 +239,8 @@ function subStockEditView($param)
 		<input type="hidden" name="orderTo" value="<?php print $param["orderTo"] ?>" />
 		<input type="hidden" name="sPage" value="<?php print $param["sPage"] ?>" />
 		<input type="hidden" name="stockNo" value="<?php print $param["stockNo"] ?>" />
+
+		<!-- <?php var_dump($param['del']); ?> -->
 
 		<table border="0" cellpadding="5" cellspacing="1">
 			<tr>
