@@ -42,9 +42,9 @@ function subStockView($param)
 						<?php
 						for ($i = 0; $i < 4; $i++) {
 						?>
-							<input type="checkbox" name="sDistance[]" value="<?php print $i + 1; ?>" <?php for ($j = 0; $j < 4; $j++) {
-																											if ($param["sDistance"][$j] == $i + 1) print ' checked="checked"';
-																										} ?> /> <?php print fnRankName($i) ?>
+							<input type="checkbox" name="sDistance[]" value="<?php print $i; ?>" <?php for ($j = 0; $j < 4; $j++) {
+																										if ($param["sDistance"][$j] == $i && $param["sDistance"][$j] != null) print ' checked="checked"';
+																									} ?> /> <?php print fnRankName($i) ?>
 						<?php
 						}
 						?>
