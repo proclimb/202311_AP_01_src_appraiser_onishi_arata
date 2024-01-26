@@ -16,13 +16,14 @@ function subStock()
         $param["sDel"] = 1;
     }
 
-    if (! $param["sPage"]) {
+    if (!$param["sPage"]) {
         $param["sPage"] = 1;
     }
 
-    if (! $param["orderBy"]) {
+    if (!$param["orderBy"]) {
         $param["orderBy"] = 'STOCKNO';
-        $param["orderTo"] = 'DESC';
+        // $param["orderTo"] = 'DESC';
+        $param["orderTo"] = 'ASC';
     }
 
     subMenu();
