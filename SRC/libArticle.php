@@ -156,6 +156,7 @@ function subArticleEdit()
 	$sKeyPlace    = $_REQUEST['sKeyPlace'];
 	$sArticleNote = $_REQUEST['sArticleNote'];
 	$sKeyBox      = $_REQUEST['sKeyBox'];
+	$sDrawing      = $_REQUEST['sDrawing']; // ★★ #19044 のバグ修正時に追加 ★★
 	$sDueDTFrom   = $_REQUEST['sDueDTFrom'];
 	$sDueDTTo     = $_REQUEST['sDueDTTo'];
 	$sSellCharge  = $_REQUEST['sSellCharge'];
@@ -202,6 +203,7 @@ function subArticleEdit()
 		<input type="hidden" name="sKeyPlace" value="<?php print $sKeyPlace  ?>" />
 		<input type="hidden" name="sArticleNote" value="<?php print $sArticleNote ?>" />
 		<input type="hidden" name="sKeyBox" value="<?php print $sKeyBox ?>" />
+		<input type="hidden" name="sDrawing" value="<?php print $sDrawing ?>" /> <!-- ★★ #19044 のバグ修正時に追加 ★★ -->
 		<input type="hidden" name="sDueDTFrom" value="<?php print $sDueDTFrom ?>" />
 		<input type="hidden" name="sDueDTTo" value="<?php print $sDueDTTo ?>" />
 		<input type="hidden" name="sSellCharge" value="<?php print $sSellCharge ?>" />
@@ -277,6 +279,7 @@ function subArticleEditComplete()
 	$sKeyPlace    = $_REQUEST['sKeyPlace'];
 	$sArticleNote = $_REQUEST['sArticleNote'];
 	$sKeyBox      = $_REQUEST['sKeyBox'];
+	$sDrawing      = $_REQUEST['sDrawing']; // ★★ #19044 のバグ修正時に追加 ★★
 	$sDueDTFrom   = $_REQUEST['sDueDTFrom'];
 	$sDueDTTo     = $_REQUEST['sDueDTTo'];
 	$sSellCharge  = $_REQUEST['sSellCharge'];
